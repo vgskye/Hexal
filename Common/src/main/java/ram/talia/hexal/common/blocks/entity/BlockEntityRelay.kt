@@ -429,6 +429,7 @@ class BlockEntityRelay(pos: BlockPos, val state: BlockState) : HexBlockEntity(He
                 if (remainingMedia <= 0)
                     break
             }
+            other.acceptMedia(root, remainingMedia)
 
             linkablesAcceptedFromThisTick.add(other)
         }
